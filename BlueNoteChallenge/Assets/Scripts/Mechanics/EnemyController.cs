@@ -120,6 +120,14 @@
         }
 
         /// <summary>
+        /// Gets the health script.
+        /// </summary>
+        public Health Health
+        { 
+            get { return health; } 
+        }
+
+        /// <summary>
         /// Gets the bounds of the collider.
         /// </summary>
         public Bounds Bounds => enemyCollider.bounds;
@@ -146,9 +154,10 @@
         {
             if (health != null)
             {
-                health.maxHP = enemySO.HitPoints;
+                health.InitializeHP(enemySO.HitPoints);
             }
             PointsAward = enemySO.PointAward;
+            spriteRenderer.color = enemySO.EnemyTint;
             shouldMove = true;
         }
 

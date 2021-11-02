@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee96cbc5f82b6014183b9aabe0fe9f8f, type: 3}
-  m_Name: SlimeEnemies_small
+  m_Name: SlimeEnemies_variant_1
   m_EditorClassIdentifier: 
-  hitPoints: 1
-  enemyTint: {r: 1, g: 1, b: 1, a: 1}
-  pointAward: 1
+  hitPoints: 5
+  enemyTint: {r: 0.43137255, g: 0.4392157, b: 1, a: 0.972549}
+  pointAward: 10
   enemyDamage: 0

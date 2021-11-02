@@ -20,7 +20,27 @@ namespace Platformer.Mechanics
         /// </summary>
         public bool IsAlive => currentHP > 0;
 
-        int currentHP;
+        /// <summary>
+        /// The current hp.
+        /// </summary>
+        private int currentHP;
+
+        /// <summary>
+        /// The Unity Awake.
+        /// </summary>
+        private void Awake()
+        {
+            currentHP = maxHP;
+        }
+
+        /// <summary>
+        /// Initializes the HP of the entity.
+        /// </summary>
+        public void InitializeHP(int initialMaxHP)
+        {
+            maxHP = initialMaxHP;
+            currentHP = maxHP;
+        }
 
         /// <summary>
         /// Increment the HP of the entity.
@@ -50,11 +70,6 @@ namespace Platformer.Mechanics
         public void Die()
         {
             while (currentHP > 0) Decrement();
-        }
-
-        void Awake()
-        {
-            currentHP = maxHP;
         }
     }
 }
