@@ -202,6 +202,7 @@
         public void EnemyHurt()
         {
             shouldMove = false;
+            control.StopPhysics = true;
             animator.SetTrigger(hurtHash);
             StartCoroutine(DoEnemyHurt());
         }
@@ -221,6 +222,7 @@
             yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).IsTag(hurtTag));
 
             shouldMove = true;
+            control.StopPhysics = false;
         }
 
         /// <summary>
@@ -228,8 +230,8 @@
         /// </summary>
         public void Die()
         {
-            shouldMove = false;
             gameObject.layer = LayerMask.NameToLayer("Ground");
+            shouldMove = false;
             control.StopPhysics = true;
 
             StartCoroutine(DoEnemyDeath());

@@ -43,5 +43,10 @@ namespace Platformer.Model
         /// the user releases the jump input.
         /// </summary>
         public float jumpDeceleration = 0.5f;
+
+        /// <summary>
+        /// A global game over screen.
+        /// </summary>
+        public GameObject gameOverScreen;
     }
 }

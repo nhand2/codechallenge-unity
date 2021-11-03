@@ -43,7 +43,7 @@ namespace Platformer.Gameplay
                     {
                         Schedule<EnemyDeath>().enemy = Enemy;
                         AddPoints(Enemy.PointsAward);
-                        Player.Bounce(2);
+                        Player.Bounce(3);
                     }
                     else
                     {
@@ -55,7 +55,7 @@ namespace Platformer.Gameplay
                 {
                     Schedule<EnemyDeath>().enemy = Enemy;
                     AddPoints(Enemy.PointsAward);
-                    Player.Bounce(2);
+                    Player.Bounce(3);
                 }
             }
             else

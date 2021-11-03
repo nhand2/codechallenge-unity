@@ -227,7 +227,9 @@
             {
                 move.x = Input.GetAxis("Horizontal");
                 if (jumpCount > 0 && Input.GetButtonDown("Jump"))
+                {
                     jumpState = JumpState.PrepareToJump;
+                }
             }
             else
             {
@@ -286,6 +288,7 @@
             {
                 velocity.y = jumpTakeOffSpeed * model.jumpModifier;
                 jump = false;
+                animator.SetBool("jumpAgain", jumpCount == 0);
             }
             else if (stopJump)
             {
@@ -312,6 +315,7 @@
         /// </summary>
         public void SetSpawnState()
         {
+            gameObject.layer = LayerMask.NameToLayer("Default");
             collider2d.enabled = true;
             controlEnabled = false;
             if (audioSource && respawnAudio)
@@ -388,6 +392,7 @@
         {
             animator.SetTrigger(victoryHash);
             controlEnabled = false;
+            model.gameOverScreen.SetActive(true);
         }
 
         /// <summary>
@@ -405,6 +410,7 @@
         public void PlayerDeath()
         {
             EnablePlayerControl(false);
+            gameObject.layer = LayerMask.NameToLayer("Ground");
             animator.SetBool("dead", true);
         }
 

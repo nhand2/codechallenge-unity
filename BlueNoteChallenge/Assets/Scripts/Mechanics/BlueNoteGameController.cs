@@ -16,6 +16,20 @@
         private PlatformerModel Model = Simulation.GetModel<PlatformerModel>();
 
         /// <summary>
+        /// Handles exiting the game.
+        /// </summary>
+        public void ExitGame()
+        {
+#if !UNITY_EDITOR
+            Application.Quit();
+#endif
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        }
+
+        /// <summary>
         /// The Unity On Enable.
         /// Initializes the instance to this game controller.
         /// </summary>
