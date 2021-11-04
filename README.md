@@ -48,12 +48,12 @@ _Where the fun really beings_
 - [X] When player runs into a cancer cell, the player loses some of their score
 - [ ] Ground continuously moves from right to left
 - [X] Player can move right or left based on user input (you choose what the input will be)
-- [ ] Player should not be able to move off screen
+- [X] Player should not be able to move off screen
 - [X] Player actions should be animated (jumping, running, etc.)
 - [X] Cancer cells should be animated (movement, pulsing, etc.)
-- [ ] Different types of cancer move at different rates
-- [ ] Different types of cancer are worth different score amounts
-- [ ] Different types of cancer have different looks and animations
+- [X] Different types of cancer move at different rates
+- [X] Different types of cancer are worth different score amounts
+- [X] Different types of cancer have different looks and animations
 - [ ] ... Now, go above and beyond. Add your additional features to this list
 
 ### Testing
