@@ -45,7 +45,11 @@ namespace Platformer.UI
             }
         }
 
-        void _ToggleMainMenu(bool show)
+        /// <summary>
+        /// Toggles the main menu.
+        /// </summary>
+        /// <param name="show"></param>
+        private void _ToggleMainMenu(bool show)
         {
             if (show)
             {

@@ -288,7 +288,6 @@
             {
                 velocity.y = jumpTakeOffSpeed * model.jumpModifier;
                 jump = false;
-                animator.SetBool("jumpAgain", jumpCount == 0);
             }
             else if (stopJump)
             {
@@ -305,6 +304,7 @@
                 spriteRenderer.flipX = true;
 
             animator.SetBool("grounded", IsGrounded);
+            animator.SetBool("jumpAgain", jumpCount == 0);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
