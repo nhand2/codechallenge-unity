@@ -26,10 +26,17 @@ namespace Platformer.UI
         /// </summary>
         public BlueNoteGameController gameController;
 
+        /// <summary>
+        /// The show main canvas flag.
+        /// </summary>
         bool showMainCanvas = false;
 
+        /// <summary>
+        /// The Unity on enable.
+        /// </summary>
         void OnEnable()
         {
+            mainMenu.gameObject.SetActive(false);
             _ToggleMainMenu(showMainCanvas);
         }
 
